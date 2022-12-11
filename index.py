@@ -36,5 +36,5 @@ class Atm:
             self.mainMenu()
             
     def openAccount(self):
-       
+        self.oneUser = []
         

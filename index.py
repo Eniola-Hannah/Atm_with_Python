@@ -218,3 +218,16 @@ class Atm:
     def checkBalance(self):
         print("Dear Cusomer; \n  your current Balance is: $" +str(self.myBalance))
         self.performTransaction()
+        
+    def exit(self):
+        self.danger = input("EXIT!!! Are you sure you want to exit? >>> ")
+        if self.danger.lower() == "yes":
+            time.sleep(1)
+            print("- Thank you for choosing " + self.name + " " + self.branch)
+            sys.exit()
+        elif self.danger.lower() == "no":
+            time.sleep(2)
+            self.mainMenu()
+        else:
+            print("It's a simple question, 'Yes' or 'No'")
+            self.exit()

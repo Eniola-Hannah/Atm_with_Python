@@ -105,12 +105,11 @@ class Atm:
             else:
                 print("Invalid input")
                 self.performTransaction()
-            
         else:
             print("Invalid Credentials Provided")
             self.performTransaction()
             
-     def newPin(self):
+    def newPin(self):
         self.input1 = input("Input your old pincode \n>>>  ")
         time.sleep(1)
         self.input2 = input("Now set in your new pincode \n>>>  ")
@@ -122,3 +121,13 @@ class Atm:
             print("The pincode does not match")
             self.setPin()
         self.performTransaction()
+        
+    def withdrawal(self):
+        print("WELCOME", self.oneUser[1].upper())
+        print("""
+                How much would you like to withdraw:
+                    1. 1,000         3. 10,000
+                    2. 5,000         4. Other Amount(please indicate...)
+                    0. back      
+                """)
+       

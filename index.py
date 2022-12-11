@@ -73,3 +73,10 @@ class Atm:
             """)
             self.setPin()
         time.sleep(2)
+        
+    def performTransaction(self):
+        print(self.customer_info)
+        self.accNo = input("Enter your account number >>>  ")
+        self.pin = input("Enter your pin >>>  ")
+        time.sleep(2)
+        

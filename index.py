@@ -89,4 +89,21 @@ class Atm:
                     5.Reset pincode            0.Exit  
                      
                     """)
+            self.input0 = input(">>  ")
+            if self.input0 == "1":   
+                self.withdrawal()
+            elif self.input0 == "2":
+                self.deposit()
+            elif self.input0 == "3":
+                self.checkBalance()
+            elif self.input0 == "4":
+                self.recharge()
+            elif self.input0 == "5":
+                self.newPin()
+            elif self.input0 == "0":
+                self.exit()
+            else:
+                print("Invalid input")
+                self.performTransaction()
             
+       

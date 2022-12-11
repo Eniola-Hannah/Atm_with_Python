@@ -205,3 +205,12 @@ class Atm:
                 self.withdrawal()
         else:
             self.performTransaction()
+            
+    def deposit(self):
+        self.deposited =  float(input("DEPOSIT, \nHow much would you like to deposit \n>> "))
+        self.depositCal = float(self.oneUser[7] + self.deposited)
+        self.customer_info[self.oneUser[6]][7] = self.depositCal
+        print("Dear Customer; \n    Amount deposited: # " + str(self.deposited)  + "\n    Total Balance: #" + str(self.depositCal))
+        print(self.customer_info)
+        time.sleep(2)
+        self.performTransaction()

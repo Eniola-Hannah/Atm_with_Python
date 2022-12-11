@@ -7,5 +7,5 @@ class Atm:
         self.name = "Channel Bank"
         self.branch = "New york"
         self.myBalance = 0.0
-       
+        self.customer_info = {}
       

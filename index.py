@@ -148,4 +148,60 @@ class Atm:
                 print("NVALID INPUT")
             time.sleep(3)
             self.performTransaction()
-        
+        elif self.withdraw1 == "2":
+            if self.oneUser[7] >= 5000:
+                print("Please wait while we proccess your request...")
+                time.sleep(3)
+                print("PLEASE TAKE YOUR CASH \n5000")
+                float(self.myBalance - 5000)
+                print("Please wait for your receipt...")
+                time.sleep(1)
+                print("Receipt: \nDear Customer; \n    Amount withdrawed: #5000 \n    Balance: " + st(float(self.myBalance - 5000)))
+                time.sleep(3)
+                self.performTransaction()
+            elif self.oneUser[7] < 5000:
+                print("INSUFFICIENT BALANCE")
+                time.sleep(2)
+                self.withdrawal()
+            else:
+                print("NVALID INPUT")
+        elif self.withdraw1 == "3":
+            if self.oneUser[7] >= 10000:
+                print("Please wait while we proccess your request...")
+                time.sleep(3)
+                print("PLEASE TAKE YOUR CASH \n10000")
+                float(self.myBalance - 10000)
+                print("Please wait for your receipt...")
+                time.sleep(3)
+                print("Receipt: \nDear Customer; \n    Amount withdrawed: #10000 \n    Balance: " + str(float(self.myBalance - 10000)))
+                time.sleep(3)
+                self.performTransaction()
+            elif self.oneUser[7] < 10000:
+                print("INSUFFICIENT BALANCE")
+                time.sleep(2)
+                self.withdrawal()
+            else:
+                print("NVALID INPUT")
+        elif self.withdraw1 == "4":
+            self.withdraw2 = float(input("indicate here > "))
+            if self.oneUser[7] >= self.withdraw2: 
+                print("Please wait while we proccess your request...")
+                time.sleep(3)
+                print("PLEASE TAKE YOUR CASH \n" + str(self.withdraw2) + "\n \nPlease note that this ATM will not retract any cash")
+                self.withdrawCal = float(self.oneUser[7] - self.withdraw2)
+                self.customer_info[self.oneUser[6]][7] = self.withdrawCal
+                print("Please wait for your receipt...")
+                time.sleep(1)
+                print("Receipt: \nDear Customer; \n    Amount withdrawed: #" + str(self.withdraw2) +"\n    Balance: " + str(self.withdrawCal))
+                time.sleep(3)
+                self.performTransaction()
+            elif self.oneUser[7] < self.withdraw2:
+                print("INSUFFICIENT BALANCE")
+                time.sleep(2)
+                self.withdrawal()
+            else:
+                print("NVALID INPUT")
+                time.sleep(1)
+                self.withdrawal()
+        else:
+            self.performTransaction()

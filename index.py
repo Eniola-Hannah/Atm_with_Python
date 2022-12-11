@@ -45,4 +45,11 @@ class Atm:
         print("please wait a bit for your account number")
         time.sleep(3)
         self.accNumber = int(numpy.random.random()*10000000000)
-        
+        print(self.accNumber)
+        self.oneUser.append(self.accNumber)
+        print("this is your account number")
+        self.oneUser.append(self.myBalance)
+        time.sleep(2)
+        self.setPin()
+        self.customer_info[self.accNumber] = self.oneUser
+        self.mainMenu()

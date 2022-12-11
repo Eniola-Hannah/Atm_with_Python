@@ -53,3 +53,9 @@ class Atm:
         self.setPin()
         self.customer_info[self.accNumber] = self.oneUser
         self.mainMenu()
+        
+    def setPin(self):
+        self.user9 = input("Now set in your new pincode \n>>>  ")
+        time.sleep(1)
+        self.user0 = (input("Confirm pincode \n>>>  "))
+       

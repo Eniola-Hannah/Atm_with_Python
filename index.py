@@ -231,3 +231,6 @@ class Atm:
         else:
             print("It's a simple question, 'Yes' or 'No'")
             self.exit()
+
+
+bank = Atm()  

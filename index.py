@@ -43,4 +43,6 @@ class Atm:
             self.user4 = input( self.details + ": ")
             self.oneUser.append(self.user4)
         print("please wait a bit for your account number")
+        time.sleep(3)
+        self.accNumber = int(numpy.random.random()*10000000000)
         

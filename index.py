@@ -109,3 +109,16 @@ class Atm:
         else:
             print("Invalid Credentials Provided")
             self.performTransaction()
+            
+     def newPin(self):
+        self.input1 = input("Input your old pincode \n>>>  ")
+        time.sleep(1)
+        self.input2 = input("Now set in your new pincode \n>>>  ")
+        time.sleep(1)
+        self.input3 = input("Confirm new pincode \n>>>  ")
+        if self.input3 == self.input2:
+            print("You have successfully create a new pincode")
+        else:
+            print("The pincode does not match")
+            self.setPin()
+        self.performTransaction()

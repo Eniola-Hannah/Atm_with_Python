@@ -50,12 +50,26 @@ class Atm:
         print("this is your account number")
         self.oneUser.append(self.myBalance)
         time.sleep(2)
-        self.setPin()
         self.customer_info[self.accNumber] = self.oneUser
-        self.mainMenu()
+        self.setPin()
+        
         
     def setPin(self):
         self.user9 = input("Now set in your new pincode \n>>>  ")
         time.sleep(1)
         self.user0 = (input("Confirm pincode \n>>>  "))
-       
+        if (self.user0 == self.user9) and  (self.user9 != "" and self.user0 != "") and (len(self.user9) == 4):
+            print("You have successfully create an account/pincode with " + self.name + ("\nYou can now proceed to perform any transaction"))
+            self.oneUser.append(self.user0)
+            self.mainMenu()
+        else:
+            print("""
+            We cannot process this pincode...
+            It's either (1) the pin does not match
+                        (2) the pin is either more or less than 4 digit
+                        (2) you've input an empty string
+                        (3) you've input a non-integer value
+            Check and try again
+            """)
+            self.setPin()
+        time.sleep(2)

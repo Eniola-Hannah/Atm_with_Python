@@ -39,4 +39,8 @@ class Atm:
         self.oneUser = []
         print("- WELCOME TO  " + self.name + " " + self.branch)
         self.user3 = ["Last Name", "First Name", "Other Name", "Age", "Phone No.", "Address"]
-      
+        for self.details in self.user3:
+            self.user4 = input( self.details + ": ")
+            self.oneUser.append(self.user4)
+        print("please wait a bit for your account number")
+        

@@ -37,4 +37,6 @@ class Atm:
             
     def openAccount(self):
         self.oneUser = []
-        
+        print("- WELCOME TO  " + self.name + " " + self.branch)
+        self.user3 = ["Last Name", "First Name", "Other Name", "Age", "Phone No.", "Address"]
+      

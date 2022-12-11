@@ -34,3 +34,7 @@ class Atm:
         else:
             print("Wrong Input, please try again")
             self.mainMenu()
+            
+    def openAccount(self):
+       
+        

@@ -8,4 +8,4 @@ class Atm:
         self.branch = "New york"
         self.myBalance = 0.0
         self.customer_info = {}
-      
+        self.mainMenu()

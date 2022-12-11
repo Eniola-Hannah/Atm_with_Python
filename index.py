@@ -214,3 +214,7 @@ class Atm:
         print(self.customer_info)
         time.sleep(2)
         self.performTransaction()
+        
+    def checkBalance(self):
+        print("Dear Cusomer; \n  your current Balance is: $" +str(self.myBalance))
+        self.performTransaction()

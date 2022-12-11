@@ -79,4 +79,14 @@ class Atm:
         self.accNo = input("Enter your account number >>>  ")
         self.pin = input("Enter your pin >>>  ")
         time.sleep(2)
-        
+        if self.accNo in self.customer_info or self.oneUser[8] == self.pin:
+            self.customer_info[self.accNo] = self.oneUser
+            print(" ")
+            print( "WELCOME " + self.oneUser[1].upper() + """
+                    - What Transaction would you like to perform;
+                    1.Withdrawal               2.Deposit
+                    3.Check Balance            4.Recharge
+                    5.Reset pincode            0.Exit  
+                     
+                    """)
+            

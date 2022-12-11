@@ -130,4 +130,22 @@ class Atm:
                     2. 5,000         4. Other Amount(please indicate...)
                     0. back      
                 """)
-       
+        self.withdraw1 = input(">> ")
+        if self.withdraw1 == "1":
+            if self.myBalance >= 1000:
+                print("Please wait while we proccess your request...")
+                time.sleep(3)
+                print("PLEASE TAKE YOUR CASH \n1000")
+                float(self.myBalance - 1000)
+                print("Please wait for your receipt...")
+                time.sleep(1)
+                print("Receipt: \nDear Customer; \n    Amount withdrawed: #1000 \n    Balance: " + str(float(self.myBalance - 1000)))
+            elif self.myBalance < 1000:
+                print("INSUFFICIENT BALANCE")
+                time.sleep(2)
+                self.withdrawal()
+            else:
+                print("NVALID INPUT")
+            time.sleep(3)
+            self.performTransaction()
+        
